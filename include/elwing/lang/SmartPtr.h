@@ -160,13 +160,13 @@ protected:
 END_ELW
 
 template <class _Ty>
-inline bool operator==(ptr32 pLeft, const elw::SmartPtr<_Ty>& ptrRight)
+inline bool operator==(void* pLeft, const elw::SmartPtr<_Ty>& ptrRight)
 {
     return ptrRight == (_Ty*)pLeft;
 }
 
 template <class _Ty>
-inline bool operator!=(ptr32 pLeft, const elw::SmartPtr<_Ty>& ptrRight)
+inline bool operator!=(void* pLeft, const elw::SmartPtr<_Ty>& ptrRight)
 {
     return ptrRight != (_Ty*)pLeft;
 }

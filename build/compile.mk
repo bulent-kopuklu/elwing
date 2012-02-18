@@ -175,11 +175,11 @@ compile: $(OBJS)
 
 exe:
 	echo "["$(PROJECT)"] Linking   ... " $(TARGET)
-	$(LD) $(OUTPUTDIR)/$(TARGET) $(OBJS) -lpthread -ldl $(LDFLAGS)
+	$(LD) $(OUTPUTDIR)/$(TARGET) $(OBJS) $(LDFLAGS) -lpthread -ldl
 
 dll:
 	echo "["$(PROJECT)"] Linking   ... " lib$(TARGET).so
-	$(LD) $(OUTPUTDIR)/lib$(TARGET).so -shared $(OBJS) -lpthread -ldl $(LDFLAGS)
+	$(LD) $(OUTPUTDIR)/lib$(TARGET).so -shared $(OBJS) $(LDFLAGS) -lpthread -ldl
 
 lib:
 	echo "["$(PROJECT)"] Linking   ... " lib$(TARGET).a
